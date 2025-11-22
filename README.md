@@ -7,8 +7,7 @@ This library is provided without any warranty or support by Bluetti. I do not ta
 ## Installation
 
 ```bash
-git clone https://github.com/Patrick762/bluetti-bt-lib.git
-pip install .
+pip install bluetti-bt-lib
 ```
 
 ## Run
