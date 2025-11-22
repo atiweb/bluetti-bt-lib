@@ -25,7 +25,11 @@ async def read_device(address: str):
         return
 
     print()
-    print("Device type is '{}' with iot version {}".format(recognized.name, recognized.iot_version))
+    print(
+        "Device type is '{}' with iot version {}".format(
+            recognized.name, recognized.iot_version
+        )
+    )
     print()
 
     built = build_device(recognized.name + "12345678")

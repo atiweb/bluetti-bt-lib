@@ -24,6 +24,6 @@ class BaseDeviceV1(BluettiDevice):
         return [
             ReadableRegisters(10, 6),
         ]
-    
+
     def get_iot_version(self) -> int:
         return 1
