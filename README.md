@@ -62,6 +62,7 @@ Validated
 |AC70       |✅                   |✅            |✅            |✅             |✅             |
 |AC180      |✅                   |✅            |✅            |✅             |✅             |
 |EB3A       |✅                   |✅            |✅            |✅             |✅             |
+|EP600      |✅                   |PV            |Grid          |❌             |AC Phases      |
 |Handsfree 1|✅                   |✅            |✅            |✅             |✅             |
 
 Added and mostly validated by contributors (some are moved here from the HA Integration https://github.com/Patrick762/hassio-bluetti-bt):
@@ -80,6 +81,8 @@ Added and mostly validated by contributors (some are moved here from the HA Inte
 |AC500      |bluetti-mqtt    |✅                   |✅            |✅            |✅             |✅             |
 |EP500      |bluetti-mqtt    |✅                   |✅            |✅            |✅             |✅             |
 |EP500P     |bluetti-mqtt    |✅                   |✅            |✅            |✅             |✅             |
+|EP760      |@Apfuntimes     |✅                   |PV            |Grid          |❌             |AC Phases      |
+|EP800      |@jhagenk        |✅                   |❌            |❌            |❌             |❌             |
 
 ## Controls
 
