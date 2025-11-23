@@ -1,5 +1,6 @@
 # bluetti-bt-lib
 Inofficial Library for basic communication to bluetti powerstations.
+Core functions based on https://github.com/warhammerkid/bluetti_mqtt
 
 ## Disclaimer
 This library is provided without any warranty or support by Bluetti. I do not take responsibility for any problems it may cause in all cases. Use it at your own risk.
@@ -72,7 +73,18 @@ Added and mostly validated by contributors (some are moved here from the HA Inte
 |AC60P      |@mzpwr          |✅                   |✅            |✅            |✅             |✅             |
 |AC70P      |@matthewpucc    |✅                   |❌            |❌            |❌             |❌             |
 |AC180P     |@Patrick762     |✅                   |✅            |✅            |✅             |✅             |
+|AC200L     |bluetti-mqtt    |✅                   |✅            |✅            |✅             |✅             |
+|AC200M     |bluetti-mqtt    |✅                   |✅            |✅            |✅             |✅             |
+|AC200PL    |@0x4E4448       |✅                   |✅            |✅            |✅             |✅             |
+|AC300      |bluetti-mqtt    |✅                   |✅            |✅            |✅             |✅             |
+|AC500      |bluetti-mqtt    |✅                   |✅            |✅            |✅             |✅             |
+|EP500      |bluetti-mqtt    |✅                   |✅            |✅            |✅             |✅             |
+|EP500P     |bluetti-mqtt    |✅                   |✅            |✅            |✅             |✅             |
 
 ## Controls
 
 Controls will be migrated to this library soon
+
+## Battery pack data
+
+Data for battery packs will no longer be available in this library

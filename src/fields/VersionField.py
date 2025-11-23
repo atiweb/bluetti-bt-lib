@@ -1,11 +1,11 @@
 import struct
 from decimal import Decimal
 
-from . import DeviceField
+from . import DeviceField, FieldName
 
 
 class VersionField(DeviceField):
-    def __init__(self, name: str, address: int):
+    def __init__(self, name: FieldName, address: int):
         super().__init__(name, address, 2)
 
     def parse(self, data: bytes) -> int:

@@ -1,10 +1,10 @@
 import struct
 
-from . import DeviceField
+from . import DeviceField, FieldName
 
 
 class UIntField(DeviceField):
-    def __init__(self, name: str, address: int, multiplier: float = 1):
+    def __init__(self, name: FieldName, address: int, multiplier: float = 1):
         super().__init__(name, address, 1)
         self.multiplier = multiplier
 

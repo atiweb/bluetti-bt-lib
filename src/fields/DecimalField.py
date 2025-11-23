@@ -1,11 +1,13 @@
 import struct
 from decimal import Decimal
 
-from . import DeviceField
+from . import DeviceField, FieldName
 
 
 class DecimalField(DeviceField):
-    def __init__(self, name: str, address: int, scale: int = 1, multiplier: float = 1):
+    def __init__(
+        self, name: FieldName, address: int, scale: int = 1, multiplier: float = 1
+    ):
         super().__init__(name, address, 1)
         self.scale = scale
         self.multiplier = multiplier

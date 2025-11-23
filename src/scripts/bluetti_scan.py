@@ -28,7 +28,9 @@ async def scan_async():
 
 def start():
     """Entrypoint."""
-    parser = argparse.ArgumentParser(description="Detect bluetti devices by bluetooth name")
+    parser = argparse.ArgumentParser(
+        description="Detect bluetti devices by bluetooth name"
+    )
     parser.parse_args()
 
     asyncio.run(scan_async())

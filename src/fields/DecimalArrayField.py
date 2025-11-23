@@ -1,11 +1,11 @@
 import struct
 from decimal import Decimal
 
-from . import DeviceField
+from . import DeviceField, FieldName
 
 
 class DecimalArrayField(DeviceField):
-    def __init__(self, name: str, address: int, size: int, scale: int):
+    def __init__(self, name: FieldName, address: int, size: int, scale: int):
         super().__init__(name, address, size)
         self.scale = scale
 
