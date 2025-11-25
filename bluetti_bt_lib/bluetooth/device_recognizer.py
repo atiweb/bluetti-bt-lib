@@ -12,13 +12,13 @@ _LOGGER = logging.getLogger(__name__)
 
 class DeviceRecognizerResult:
     def __init__(
-        self, name: str, iot_version: int, encrypted: bool, sn: str | None = None
+        self, name: str, iot_version: int, encrypted: bool, sn: int | None = None
     ):
         self.name = name
         self.iot_version = iot_version
         self.encrypted = encrypted
         self.sn = sn
-        self.full_name = name + sn
+        self.full_name = name + str(sn)
 
 
 async def recognize_device(
@@ -92,7 +92,7 @@ async def recognize_device(
 
             sn_data = data.get(FieldName.DEVICE_SN.value)
 
-            if isinstance(sn_data, str) or sn_data == "":
+            if not isinstance(sn_data, int) or sn_data == "":
                 # Should never happen
                 return DeviceRecognizerResult(
                     type_data,
