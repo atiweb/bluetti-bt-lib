@@ -2,7 +2,7 @@
 name: Request new fields
 about: Request new device fields
 title: "[NEW FIELD]"
-labels: ''
+labels: NEW FIELDS
 assignees: Patrick762
 
 ---
