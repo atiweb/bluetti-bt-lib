@@ -1,10 +1,12 @@
 import unittest
 
+from bluetti_bt_lib.enums import EcoMode
 from bluetti_bt_lib.fields import (
     DecimalField,
     DeviceField,
     FieldName,
     IntField,
+    SelectField,
     UIntField,
 )
 
@@ -48,3 +50,7 @@ class TestDeviceFields(unittest.TestCase):
         self.assertTrue(field.in_range(100))
         self.assertFalse(field.in_range(-1))
         self.assertFalse(field.in_range(101))
+
+    def test_select(self):
+        field = SelectField(FieldName.CTRL_ECO_TIME_MODE, 3064, EcoMode)
+        self.assertEqual(field.parse(bytes([0, 4])), EcoMode.HOURS4)

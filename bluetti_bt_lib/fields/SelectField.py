@@ -1,18 +1,21 @@
 import struct
 from enum import Enum
-from typing import Any, Type
+from typing import Any, Type, TypeVar
 
 from . import DeviceField, FieldName
 
 
-class SelectField(DeviceField):
-    def __init__(self, name: FieldName, address: int, enum: Type[Enum]):
-        super().__init__(name, address, 1)
-        self.enum = enum
+E = TypeVar("E", bound=Enum)
 
-    def parse(self, data: bytes) -> Any:
+
+class SelectField(DeviceField):
+    def __init__(self, name: FieldName, address: int, e: Type[E]):
+        super().__init__(name, address, 1)
+        self.e = e
+
+    def parse(self, data: bytes) -> E | None:
         val = struct.unpack("!H", data)[0]
-        return self.enum(val)
+        return self.e(val)
 
     def is_writeable(self):
         return True

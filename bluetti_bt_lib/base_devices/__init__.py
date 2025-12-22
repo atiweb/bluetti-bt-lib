@@ -1,3 +1,3 @@
-from .BluettiDevice import *
-from .BaseDeviceV1 import *
-from .BaseDeviceV2 import *
+from .bluetti_device import *
+from .base_device_v1 import *
+from .base_device_v2 import *
