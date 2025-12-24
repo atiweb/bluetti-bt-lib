@@ -30,6 +30,7 @@ Added and mostly validated by contributors (some are moved here from the HA Inte
 |Device Name|Contributor     |total_battery_percent|dc_input_power|ac_input_power|dc_output_power|ac_output_power|
 |-----------|----------------|---------------------|--------------|--------------|---------------|---------------|
 |AC2A       |@ruanmed        |✅                   |✅            |✅            |✅             |✅             |
+|AC50B      |@goetzc         |✅                   |❌            |✅            |✅             |✅             |
 |AC60       |@mzpwr          |✅                   |✅            |✅            |✅             |✅             |
 |AC60P      |@mzpwr          |✅                   |✅            |✅            |✅             |✅             |
 |AC70P      |@matthewpucc    |✅                   |✅            |✅            |✅             |✅             |
