@@ -6,6 +6,7 @@ class EP600(BaseDeviceV2):
     def __init__(self):
         super().__init__(
             [
+                DecimalField(FieldName.POWER_GENERATION, 1202, 1),
                 UIntField(FieldName.PV_S1_POWER, 1212),
                 DecimalField(FieldName.PV_S1_VOLTAGE, 1213, 1),
                 DecimalField(FieldName.PV_S1_CURRENT, 1214, 1),
@@ -41,5 +42,7 @@ class EP600(BaseDeviceV2):
                 IntField(FieldName.AC_P3_POWER, 1524),
                 DecimalField(FieldName.AC_P3_VOLTAGE, 1525, 1),
                 DecimalField(FieldName.AC_P3_CURRENT, 1526, 1),
+                IntField(FieldName.BATTERY_SOC_RANGE_START, 2022),
+                IntField(FieldName.BATTERY_SOC_RANGE_END, 2023),
             ],
         )

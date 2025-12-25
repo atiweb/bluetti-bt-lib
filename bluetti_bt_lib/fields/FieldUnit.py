@@ -20,6 +20,8 @@ FIELD_UNIT: Dict[FieldName, str] = {
     FieldName.AC_P3_POWER: "W",
     FieldName.AC_P3_VOLTAGE: "V",
     FieldName.BATTERY_SOC: "%",
+    FieldName.BATTERY_SOC_RANGE_END: "%",
+    FieldName.BATTERY_SOC_RANGE_START: "%",
     FieldName.DC_INPUT_CURRENT: "A",
     FieldName.DC_INPUT_POWER: "W",
     FieldName.DC_INPUT_VOLTAGE: "V",
@@ -59,5 +61,5 @@ FIELD_UNIT: Dict[FieldName, str] = {
 }
 
 
-def get_unit(field: FieldName):
+def get_unit(field: FieldName) -> str | None:
     return FIELD_UNIT.get(field)
