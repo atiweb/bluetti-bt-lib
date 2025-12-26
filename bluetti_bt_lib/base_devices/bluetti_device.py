@@ -1,7 +1,7 @@
 from typing import Any, List
 
 from ..registers import ReadableRegisters, WriteableRegister
-from ..fields import DeviceField, EnumField, BoolField, SwitchField, SelectField
+from ..fields import DeviceField, BoolField, SwitchField, SelectField
 
 
 class BluettiDevice:
@@ -12,13 +12,19 @@ class BluettiDevice:
         for f in fields:
             self.fields.append(f)
 
-    def get_polling_registers(self) -> List[ReadableRegisters]:
+    def get_polling_registers(self, tolerance: int = 20) -> List[ReadableRegisters]:
         result = []
 
-        # TODO Optimize this to reduce amount of registers to separately request
+        self.fields.sort(key=lambda f: f.address)
 
+        # Optimize amount of registers to separately request
+        group = ReadableRegisters(self.fields[0].address, tolerance)
+        result.append(group)
         for f in self.fields:
-            result.append(ReadableRegisters(f.address, f.size))
+            if f.address + f.size < group.starting_address + tolerance:
+                continue
+            group = ReadableRegisters(f.address, tolerance)
+            result.append(group)
 
         return result
 
