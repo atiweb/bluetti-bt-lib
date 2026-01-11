@@ -47,6 +47,7 @@ Added and mostly validated by contributors (some are moved here from the HA Inte
 |EP500P     |bluetti-mqtt    |✅                   |✅            |✅            |✅             |✅             |
 |EP760      |@Apfuntimes     |✅                   |PV            |Grid          |❌             |AC Phases      |
 |EP800      |@jhagenk        |✅                   |❌            |❌            |❌             |❌             |
+|PR30V2     |@gentoo90       |✅                   |✅            |✅            |✅             |✅             |
 
 ## Controls
 
