@@ -27,6 +27,7 @@ Validated
 
 Added and mostly validated by contributors (some are moved here from the HA Integration https://github.com/Patrick762/hassio-bluetti-bt):
 
+
 |Device Name|Contributor                                                                        |total_battery_percent|dc_input_power|ac_input_power|dc_output_power|ac_output_power|
 |-----------|-----------------------------------------------------------------------------------|---------------------|--------------|--------------|---------------|---------------|
 |AC2A       |[@ruanmed](https://github.com/ruanmed)                                             |✅                   |✅            |✅            |✅             |✅             |
@@ -47,6 +48,7 @@ Added and mostly validated by contributors (some are moved here from the HA Inte
 |EP500P     |bluetti-mqtt                                                                       |✅                   |✅            |✅            |✅             |✅             |
 |EP760      |[@Apfuntimes](https://github.com/Apfuntimes)                                       |✅                   |PV            |Grid          |❌             |AC Phases      |
 |EP800      |[@jhagenk](https://github.com/jhagenk)                                             |✅                   |❌            |❌            |❌             |❌             |
+|PR30V2     |@gentoo90                                                                          |✅                   |✅            |✅            |✅             |✅             |
 
 ## Controls
 
