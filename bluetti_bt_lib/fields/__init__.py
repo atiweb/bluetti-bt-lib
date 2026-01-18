@@ -1,8 +1,9 @@
-from .DeviceField import *
+﻿from .DeviceField import *
 from .FieldName import *
 from .FieldUnit import *
 
 from .BoolField import *
+from .BoolFieldNonZero import *
 from .DecimalArrayField import *
 from .DecimalField import *
 from .EnumField import *
